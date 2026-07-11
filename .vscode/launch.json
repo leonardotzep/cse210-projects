@@ -2,6 +2,13 @@
 {
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "C#: <project-name> Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/<relative-path-to-project-folder><project-name>.csproj"
+        },
+        
 
         {
             "name": "Sandbox Project",
@@ -20,12 +27,9 @@
             "name": "Week 01: C# Exercise 1",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-week01-Exercise1",
             "program": "${workspaceFolder}/week01/Exercise1/bin/Debug/net10.0/Exercise1.dll",
-            "args": [],
             "cwd": "${workspaceFolder}/week01/Exercise1",
             "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
 

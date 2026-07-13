@@ -11,11 +11,13 @@ class Program
         {
             int magicNumb = randomGenerator.Next(1,100);
             int guess = -1;
+            int guessCount = 1;
 
             while (guess != magicNumb)
             {
                 Console.Write("What is the number you would like to guess? ");
                 guess = int.Parse(Console.ReadLine());
+                guessCount = guessCount +1;
 
                 if (magicNumb > guess)
                 {
@@ -28,6 +30,7 @@ class Program
                 else
                 {
                     Console.WriteLine("You guess it! ");
+                    Console.WriteLine($"It took you {guessCount} guesses. ");
                     Console.WriteLine("Would you like to play again? yes/no ");
                     response = Console.ReadLine();
                 }

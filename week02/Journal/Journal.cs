@@ -32,9 +32,9 @@ class Journal
             string[] parts = line.Split("|");
             Entry entry = new Entry
             {
-                _Date = parts[0],
-                _Prompt = parts[1],
-                _Response = parts[2]
+                _date = parts[0],
+                _prompt = parts[1],
+                _response = parts[2]
             };
             _journalEntries.Add(entry);
         }
@@ -46,7 +46,7 @@ class Journal
         {
             foreach(Entry entry in _journalEntries)
             {
-                outputFile.WriteLine($"{entry._Date}|{entry._Prompt}|{entry._Response}");
+                outputFile.WriteLine($"{entry._date}|{entry._prompt}|{entry._response}");
             }
         }
     }
@@ -56,8 +56,8 @@ class Journal
         bool found = false;
         foreach (Entry entry in _journalEntries)
         {
-            if (entry._Prompt.Contains(keyword, StringComparison.OrdinalIgnoreCase) ||
-            entry._Response.Contains(keyword, StringComparison.OrdinalIgnoreCase))
+            if (entry._prompt.Contains(keyword, StringComparison.OrdinalIgnoreCase) ||
+            entry._response.Contains(keyword, StringComparison.OrdinalIgnoreCase))
             {
                 entry.Display();
                 found = true;

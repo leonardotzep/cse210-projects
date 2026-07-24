@@ -33,9 +33,9 @@ class Program
 
                     Entry newEntry = new Entry
                     {
-                        _Date = DateTime.Now.ToString("MM/dd/yyyy"),
-                        _Prompt = prompt,
-                        _Response = response
+                        _date = DateTime.Now.ToString("MM/dd/yyyy"),
+                        _prompt = prompt,
+                        _response = response
                     };
                     journal.AddEntry(newEntry);
                     break;

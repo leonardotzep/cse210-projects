@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations;
 
 class Entry
 {
-    public string _Date {get; set; }
-    public string _Prompt {get; set; }
-    public string _Response {get; set; }
+    public string _date {get; set; }
+    public string _prompt {get; set; }
+    public string _response {get; set; }
 
     public void Display()
     {
-        Console.WriteLine($"Date: {_Date} - Prompt: {_Prompt}");
-        Console.WriteLine($"Response: {_Response}\n");
+        Console.WriteLine($"Date: {_date} - Prompt: {_prompt}");
+        Console.WriteLine($"Response: {_response}\n");
     }
 }

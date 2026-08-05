@@ -22,5 +22,4 @@ class Assignment
     {
         return _studentName + " - " + _topic;
     }
-
 }
